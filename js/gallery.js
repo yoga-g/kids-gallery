@@ -100,11 +100,6 @@
         card.appendChild(grid);
       }
 
-      // Watermark overlay
-      const watermark = document.createElement("div");
-      watermark.className = "card-watermark";
-      card.appendChild(watermark);
-
       const info = document.createElement("div");
       info.className = "card-info";
 

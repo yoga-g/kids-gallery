@@ -104,35 +104,6 @@ body {
   border-radius: 12px 12px 0 0;
 }
 
-/* ===== Watermark overlay on cards ===== */
-.card-watermark {
-  position: absolute;
-  inset: 0;
-  bottom: 3.5rem; /* don't cover card-info */
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.card-watermark::before {
-  content: "Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©";
-  position: absolute;
-  inset: -50%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  gap: 1.5rem 2rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.06);
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-  word-spacing: 2rem;
-  line-height: 3;
-  transform: rotate(-25deg);
-}
-
 /* ===== Card grid — multi-image series ===== */
 .card-grid {
   display: grid;
@@ -238,37 +209,6 @@ body {
   user-select: none;
   -webkit-touch-callout: none;
   pointer-events: none;
-}
-
-/* Watermark overlay on lightbox image */
-.lightbox-watermark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 4rem; /* above caption */
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.lightbox-watermark::before {
-  content: "Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©  Kids Gallery  ©";
-  position: absolute;
-  inset: -50%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  gap: 2rem 3rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.08);
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-  word-spacing: 3rem;
-  line-height: 3.5;
-  transform: rotate(-25deg);
 }
 
 .lightbox-caption {
