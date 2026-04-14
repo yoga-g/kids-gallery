@@ -21,7 +21,7 @@
       const res = await fetch(ARTWORKS_URL);
       allData = await res.json();
     } catch (err) {
-      gallery.innerHTML = '<p class="empty-state">暂无作品，敬请期待！</p>';
+      gallery.innerHTML = '<p class="empty-state">No artworks yet — stay tuned!</p>';
       console.error("Failed to load artworks:", err);
       return;
     }
@@ -60,7 +60,7 @@
     gallery.innerHTML = "";
 
     if (currentArtworks.length === 0) {
-      gallery.innerHTML = '<p class="empty-state">暂无作品，敬请期待！</p>';
+      gallery.innerHTML = '<p class="empty-state">No artworks yet — stay tuned!</p>';
       return;
     }
 
