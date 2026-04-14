@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小朋友画画展示站</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>🎨 小朋友画画展示站</h1>
+    <p class="subtitle">记录每一幅用心的作品</p>
+  </header>
+
+  <main id="gallery" class="gallery"></main>
+
+  <!-- 灯箱 -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="关闭">&times;</button>
+    <button class="lightbox-prev" aria-label="上一张">&#10094;</button>
+    <button class="lightbox-next" aria-label="下一张">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Made with ❤️</p>
+  </footer>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>
