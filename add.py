@@ -69,8 +69,8 @@ def add_watermark(src_path, dst_path, text=None):
 
     for y in range(0, canvas_size, step_y):
         for x in range(0, canvas_size, step_x):
-            txt_draw.text((x+1, y+1), text, font=font, fill=(0, 0, 0, 25))
-            txt_draw.text((x, y), text, font=font, fill=(255, 255, 255, 45))
+            txt_draw.text((x+1, y+1), text, font=font, fill=(0, 0, 0, 12))
+            txt_draw.text((x, y), text, font=font, fill=(255, 255, 255, 22))
 
     txt_layer = txt_layer.rotate(25, expand=False, center=(canvas_size // 2, canvas_size // 2))
     cx, cy = canvas_size // 2, canvas_size // 2
