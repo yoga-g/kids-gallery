@@ -1,72 +1,42 @@
 {
   "yoga": [
     {
-      "file": "2025-12-9yoga.jpg",
       "title": "Clock & Turtle",
       "date": "2025-12",
-      "description": "Handmade clock craft with a cute clay turtle"
+      "description": "Handmade clock craft with a cute clay turtle",
+      "images": ["2025-12-9yoga.jpg"]
     },
     {
-      "file": "2026-4-12_yoga_p1.jpg",
-      "title": "Castle Backpack",
+      "title": "Backpack Collection",
       "date": "2026-04",
-      "description": "A colorful backpack topped with a grand castle"
+      "description": "Three creative bags — colorful, green, and blue",
+      "images": ["2026-4-12_yoga_p1.jpg", "2026-4-12_yoga_p2.jpg", "2026-4-12_yoga_p3.jpg"]
     },
     {
-      "file": "2026-4-12_yoga_p2.jpg",
-      "title": "Green Bag",
-      "date": "2026-04",
-      "description": "A cool green and blue bag, ready for adventure"
-    },
-    {
-      "file": "2026-4-12_yoga_p3.jpg",
-      "title": "Blue Train",
-      "date": "2026-04",
-      "description": "A train rolling down the tracks in bold blue"
-    },
-    {
-      "file": "2026-4-12-yoga.jpg",
       "title": "Stripy Snake House",
       "date": "2026-04",
-      "description": "A striped snake curling around a cozy little house"
+      "description": "A striped snake curling around a cozy little house",
+      "images": ["2026-4-12-yoga.jpg"]
     },
     {
-      "file": "2026-4-13-yoga_p1.jpg",
-      "title": "Starry Night Ride",
+      "title": "Chalk Board Series",
       "date": "2026-04",
-      "description": "Chalk on blackboard — vehicles under a starry sky"
+      "description": "Chalk drawings on blackboard — night sky, characters, and houses",
+      "images": ["2026-4-13-yoga_p1.jpg", "2026-4-13-yoga_p2.jpg", "2026-4-13-yoga_p3.jpg", "2026-4-13-yoga_p4.jpg"]
     },
     {
-      "file": "2026-4-13-yoga_p2.jpg",
-      "title": "Spiky Hair Guy",
-      "date": "2026-04",
-      "description": "Chalk on blackboard — a wild-haired character"
-    },
-    {
-      "file": "2026-4-13-yoga_p3.jpg",
-      "title": "Chalk Houses",
-      "date": "2026-04",
-      "description": "Chalk on blackboard — houses with a little person on top"
-    },
-    {
-      "file": "2026-4-13-yoga_p4.jpg",
-      "title": "Three Buildings",
-      "date": "2026-04",
-      "description": "Chalk on blackboard — a neighborhood triptych"
-    },
-    {
-      "file": "2026-yoga.jpg",
       "title": "Hermit Crab",
       "date": "2026",
-      "description": "Bold oil painting — a fierce hermit crab in red and black"
+      "description": "Bold oil painting — a fierce hermit crab in red and black",
+      "images": ["2026-yoga.jpg"]
     }
   ],
   "siyu": [
     {
-      "file": "2026-4-12_Sy.jpg",
       "title": "Circles Everywhere",
       "date": "2026-04",
-      "description": "Playful loops and shapes in purple, pink, and blue"
+      "description": "Playful loops and shapes in purple, pink, and blue",
+      "images": ["2026-4-12_Sy.jpg"]
     }
   ]
 }
