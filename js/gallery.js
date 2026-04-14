@@ -203,18 +203,21 @@
     // Touch swipe support for mobile
     let touchStartX = 0;
     let touchStartY = 0;
+    let touchStartTime = 0;
 
     lightbox.addEventListener("touchstart", (e) => {
       touchStartX = e.changedTouches[0].screenX;
       touchStartY = e.changedTouches[0].screenY;
+      touchStartTime = Date.now();
     }, { passive: true });
 
     lightbox.addEventListener("touchend", (e) => {
       const dx = e.changedTouches[0].screenX - touchStartX;
       const dy = e.changedTouches[0].screenY - touchStartY;
+      const dt = Date.now() - touchStartTime;
 
-      // Only trigger if horizontal swipe is dominant and long enough
-      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      // Require: >80px horizontal, clearly horizontal (3x), and within 500ms
+      if (Math.abs(dx) > 80 && Math.abs(dx) > Math.abs(dy) * 3 && dt < 500) {
         if (dx < 0) navigate(1);   // swipe left → next
         else        navigate(-1);   // swipe right → prev
       }
