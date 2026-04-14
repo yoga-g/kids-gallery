@@ -41,7 +41,7 @@ def add_watermark(src_path, dst_path):
     w, h = img.size
 
     diag = math.sqrt(w * w + h * h)
-    font_size = max(16, int(diag * 0.025))
+    font_size = max(20, int(diag * 0.03))
 
     try:
         font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", font_size)
@@ -54,8 +54,8 @@ def add_watermark(src_path, dst_path):
     tw = bbox[2] - bbox[0]
     th = bbox[3] - bbox[1]
 
-    step_x = tw + int(tw * 0.8)
-    step_y = th + int(th * 3)
+    step_x = tw + int(tw * 0.6)
+    step_y = th + int(th * 2.5)
 
     canvas_size = int(diag * 1.5)
     txt_layer = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
@@ -63,7 +63,8 @@ def add_watermark(src_path, dst_path):
 
     for y in range(0, canvas_size, step_y):
         for x in range(0, canvas_size, step_x):
-            txt_draw.text((x, y), WATERMARK_TEXT, font=font, fill=(255, 255, 255, 35))
+            txt_draw.text((x+1, y+1), WATERMARK_TEXT, font=font, fill=(0, 0, 0, 50))
+            txt_draw.text((x, y), WATERMARK_TEXT, font=font, fill=(255, 255, 255, 80))
 
     txt_layer = txt_layer.rotate(25, expand=False, center=(canvas_size // 2, canvas_size // 2))
     cx, cy = canvas_size // 2, canvas_size // 2
