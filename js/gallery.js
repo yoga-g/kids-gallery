@@ -2,9 +2,8 @@
   "use strict";
 
   const ARTWORKS_URL = "data/artworks.json";
-  const IMAGE_BASE   = "images/artworks/";
+  const IMAGE_BASE   = "images/artworks/yoga/";
 
-  let currentChild  = "yoga";
   let currentSeries = [];
   let seriesIndex   = -1;
   let imageIndex    = 0;
@@ -21,25 +20,19 @@
   // ---- Helpers ----
   function getFile(img)    { return typeof img === "string" ? img : img.file; }
   function getCaption(img) { return typeof img === "string" ? ""  : (img.caption || ""); }
-  function imgSrc(img)     { return IMAGE_BASE + currentChild + "/" + getFile(img); }
+  function imgSrc(img)     { return IMAGE_BASE + getFile(img); }
 
   // ---- Init ----
   async function init() {
-    // Read which child's gallery to show from the data attribute
-    currentChild = gallery.dataset.child || "yoga";
-
-    let allData;
     try {
       const res = await fetch(ARTWORKS_URL);
-      allData = await res.json();
+      currentSeries = await res.json();
     } catch (err) {
       gallery.innerHTML = '<p class="empty-state">No artworks yet — stay tuned!</p>';
       return;
     }
 
-    currentSeries = (allData[currentChild] || []).slice();
     currentSeries.sort((a, b) => b.date.localeCompare(a.date));
-
     renderGallery();
     bindLightbox();
     bindProtection();
