@@ -22,16 +22,29 @@
   function getCaption(img) { return typeof img === "string" ? ""  : (img.caption || ""); }
   function imgSrc(img)     { return IMAGE_BASE + getFile(img); }
 
+  const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
   function formatDate(dateStr) {
-    // "2026-04-14" → "Apr 14, 2026"
     const parts = dateStr.split("-");
     const y = parts[0];
     const m = parts[1] ? parseInt(parts[1], 10) : null;
     const d = parts[2] ? parseInt(parts[2], 10) : null;
-    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-    if (m && d) return months[m - 1] + " " + d + ", " + y;
-    if (m)      return months[m - 1] + " " + y;
+    if (m && d) return MONTHS[m - 1] + " " + d + ", " + y;
+    if (m)      return MONTHS[m - 1] + " " + y;
     return y;
+  }
+
+  /** "2026-04-14" → "2026-04" */
+  function monthKey(dateStr) {
+    const parts = dateStr.split("-");
+    if (parts.length >= 2) return parts[0] + "-" + parts[1].padStart(2, "0");
+    return parts[0] + "-01";
+  }
+
+  /** "2026-04" → { month: "Apr", year: "2026" } */
+  function parseMonthKey(key) {
+    const [y, m] = key.split("-");
+    return { month: MONTHS[parseInt(m, 10) - 1], year: y };
   }
 
   // ---- Init ----
@@ -59,62 +72,92 @@
       return;
     }
 
+    // Group by month
+    const groups = new Map();
+    currentSeries.forEach((series, idx) => {
+      const key = monthKey(series.date);
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push({ series, idx });
+    });
+
     const fragment = document.createDocumentFragment();
 
-    currentSeries.forEach((series, idx) => {
-      const card = document.createElement("div");
-      card.className = "card";
-      card.dataset.series = idx;
+    groups.forEach((items, key) => {
+      const { month, year } = parseMonthKey(key);
 
-      const images = series.images;
+      const group = document.createElement("section");
+      group.className = "timeline-group";
 
-      if (images.length === 1) {
-        const img = document.createElement("img");
-        img.alt = series.title;
-        img.loading = "lazy";
-        img.src = imgSrc(images[0]);
-        img.dataset.imgIdx = "0";
-        card.appendChild(img);
-      } else {
-        const grid = document.createElement("div");
-        grid.className = "card-grid";
-        const count = Math.min(images.length, 4);
-        grid.classList.add("grid-" + count);
+      // Left: month label
+      const label = document.createElement("div");
+      label.className = "timeline-label";
+      label.innerHTML =
+        '<div class="timeline-month">' + month + '</div>' +
+        '<div class="timeline-year">' + year + '</div>';
 
-        for (let i = 0; i < count; i++) {
+      // Right: cards
+      const cardsWrap = document.createElement("div");
+      cardsWrap.className = "timeline-cards";
+
+      items.forEach(({ series, idx }) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.dataset.series = idx;
+
+        const images = series.images;
+
+        if (images.length === 1) {
           const img = document.createElement("img");
-          img.alt = series.title + " " + (i + 1);
+          img.alt = series.title;
           img.loading = "lazy";
-          img.src = imgSrc(images[i]);
-          img.dataset.imgIdx = String(i);
-          grid.appendChild(img);
+          img.src = imgSrc(images[0]);
+          img.dataset.imgIdx = "0";
+          card.appendChild(img);
+        } else {
+          const grid = document.createElement("div");
+          grid.className = "card-grid";
+          const count = Math.min(images.length, 4);
+          grid.classList.add("grid-" + count);
+
+          for (let i = 0; i < count; i++) {
+            const img = document.createElement("img");
+            img.alt = series.title + " " + (i + 1);
+            img.loading = "lazy";
+            img.src = imgSrc(images[i]);
+            img.dataset.imgIdx = String(i);
+            grid.appendChild(img);
+          }
+
+          card.appendChild(grid);
         }
 
-        card.appendChild(grid);
-      }
+        const info = document.createElement("div");
+        info.className = "card-info";
 
-      const info = document.createElement("div");
-      info.className = "card-info";
+        const title = document.createElement("div");
+        title.className = "card-title";
+        title.textContent = series.title;
 
-      const title = document.createElement("div");
-      title.className = "card-title";
-      title.textContent = series.title;
+        const meta = document.createElement("div");
+        meta.className = "card-meta";
 
-      const meta = document.createElement("div");
-      meta.className = "card-meta";
+        const dateSpan = document.createElement("span");
+        dateSpan.textContent = formatDate(series.date);
 
-      const dateSpan = document.createElement("span");
-      dateSpan.textContent = formatDate(series.date);
+        const descSpan = document.createElement("span");
+        descSpan.textContent = series.description || "";
 
-      const descSpan = document.createElement("span");
-      descSpan.textContent = series.description || "";
+        meta.appendChild(dateSpan);
+        meta.appendChild(descSpan);
+        info.appendChild(title);
+        info.appendChild(meta);
+        card.appendChild(info);
+        cardsWrap.appendChild(card);
+      });
 
-      meta.appendChild(dateSpan);
-      meta.appendChild(descSpan);
-      info.appendChild(title);
-      info.appendChild(meta);
-      card.appendChild(info);
-      fragment.appendChild(card);
+      group.appendChild(label);
+      group.appendChild(cardsWrap);
+      fragment.appendChild(group);
     });
 
     gallery.appendChild(fragment);

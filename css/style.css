@@ -30,19 +30,72 @@ body {
   color: #888;
 }
 
-/* ===== Gallery — CSS Columns Masonry ===== */
+/* ===== Timeline Gallery ===== */
 .gallery {
-  column-count: 3;
-  column-gap: 1.2rem;
-  padding: 1.5rem 2rem 3rem;
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
+  padding: 1rem 2rem 3rem;
 }
 
-/* ===== Card (single image) ===== */
+/* -- Month group -- */
+.timeline-group {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0 2rem;
+  position: relative;
+}
+
+/* Vertical line */
+.timeline-group::before {
+  content: "";
+  position: absolute;
+  left: 120px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e8e5e0;
+}
+
+/* Last group: line stops at last card center */
+.timeline-group:last-child::before {
+  bottom: 50%;
+}
+
+.timeline-label {
+  position: sticky;
+  top: 1.5rem;
+  align-self: start;
+  text-align: right;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+}
+
+.timeline-month {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.timeline-year {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #e0dcd6;
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+
+.timeline-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0.5rem 0 2.5rem 2rem;
+  position: relative;
+}
+
+/* ===== Card ===== */
 .card {
-  break-inside: avoid;
-  margin-bottom: 1.2rem;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -50,11 +103,32 @@ body {
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
+  max-width: 560px;
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+}
+
+/* Dot on timeline */
+.card::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 1.8rem;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.card:hover::before {
+  border-color: #999;
+  background: #f0eeeb;
 }
 
 .card > img,
@@ -135,7 +209,6 @@ body {
   padding: 4rem 1rem;
   color: #bbb;
   font-size: 1.1rem;
-  column-span: all;
 }
 
 /* ===== Lightbox ===== */
@@ -259,16 +332,39 @@ body {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .gallery {
-    column-count: 2;
-    padding: 1rem 1.2rem 2rem;
+@media (max-width: 700px) {
+  .timeline-group {
+    grid-template-columns: 64px 1fr;
+    gap: 0 1rem;
   }
-}
 
-@media (max-width: 540px) {
+  .timeline-group::before {
+    left: 64px;
+  }
+
+  .timeline-label {
+    padding-right: 0.8rem;
+  }
+
+  .timeline-month {
+    font-size: 0.8rem;
+  }
+
+  .timeline-year {
+    font-size: 1.6rem;
+  }
+
+  .timeline-cards {
+    padding-left: 1.2rem;
+  }
+
+  .card::before {
+    left: -1.2rem;
+    width: 8px;
+    height: 8px;
+  }
+
   .gallery {
-    column-count: 1;
     padding: 0.5rem 1rem 2rem;
   }
 
