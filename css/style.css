@@ -424,6 +424,95 @@ body {
 .tag-drawing        { background: #4c51bf; }
 .tag-clay           { background: #975a16; }
 
+/* ===== Tag Filter Bar ===== */
+.tag-filter {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.tag-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  font-size: 0.72rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  color: #fff;
+  opacity: 0.55;
+}
+
+.tag-filter-btn:hover {
+  opacity: 0.85;
+}
+
+.tag-filter-btn.active {
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transform: scale(1.05);
+}
+
+.tag-filter-btn .tag-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.3);
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tag-filter-btn.active .tag-count {
+  background: rgba(255,255,255,0.45);
+}
+
+/* "All" button */
+.tag-filter-btn-all {
+  background: #7c5cbf;
+  border-color: #7c5cbf;
+  color: #fff;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  opacity: 0.6;
+}
+
+.tag-filter-btn-all:hover {
+  opacity: 0.85;
+}
+
+.tag-filter-btn-all.active {
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(124,92,191,0.3);
+}
+
+/* Card hide/show for filtering */
+.card.tag-hidden {
+  display: none;
+}
+
+/* Timeline group hide when all cards hidden */
+.timeline-group.tag-hidden {
+  display: none;
+}
+
 /* ===== Dark Mode ===== */
 body.dark {
   background: #1a1a2e;
@@ -487,6 +576,11 @@ body.dark .timeline-year { color: #8a7aaa; }
 
 body.dark .empty-state { color: #666; }
 
+body.dark .tag-filter-btn-all {
+  background: #5a3d9e;
+  border-color: #5a3d9e;
+}
+
 body.dark .site-footer { color: #666; }
 body.dark .site-footer .copyright { color: #777; }
 body.dark .site-footer .copyright-notice { color: #666; }
@@ -522,6 +616,27 @@ body.dark .site-footer .copyright-notice { color: #666; }
   .month-nav-pill {
     padding: 0.25rem 0.6rem;
     font-size: 0.65rem;
+  }
+
+  .tag-filter {
+    padding: 0.4rem 0.6rem 0.2rem;
+    gap: 0.3rem;
+  }
+
+  .tag-filter-btn {
+    padding: 0.2rem 0.55rem;
+    font-size: 0.62rem;
+  }
+
+  .tag-filter-btn-all {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.62rem;
+  }
+
+  .tag-filter-btn .tag-count {
+    min-width: 16px;
+    height: 16px;
+    font-size: 0.55rem;
   }
 
   .gallery {

@@ -9,6 +9,7 @@
   let imageIndex    = 0;
   let currentLang   = "en"; // "en" or "zh"
   let scrollObserver = null;
+  let activeTag      = null; // null = show all
 
   // ---- i18n ----
   const I18N = {
@@ -19,6 +20,8 @@
       copyright_notice: "All artworks on this site are original creations and protected by copyright law. Unauthorized reproduction, distribution, or use is strictly prohibited.",
       made_with: "Made with",
       empty: "No artworks yet — stay tuned!",
+      all: "All",
+      all: "All",
       chalkboard: "chalkboard",
       "oil painting": "oil painting",
       collage: "collage",
@@ -35,6 +38,7 @@
       copyright_notice: "本网站所有作品均为原创，受版权法保护。未经授权，禁止复制、传播或使用。",
       made_with: "用心制作",
       empty: "还没有作品——敬请期待！",
+      all: "全部",
       chalkboard: "黑板画",
       "oil painting": "油画",
       collage: "拼贴",
@@ -63,6 +67,7 @@
   const btnNext         = lightbox.querySelector(".lightbox-next");
   const langToggle      = document.getElementById("lang-toggle");
   const themeToggle     = document.getElementById("theme-toggle");
+  const tagFilter       = document.getElementById("tag-filter");
 
   // ---- Helpers ----
   function getFile(img)    { return typeof img === "string" ? img : img.file; }
@@ -261,6 +266,9 @@
         var card = document.createElement("div");
         card.className = "card";
         card.dataset.series = idx;
+        if (series.tags && series.tags.length > 0) {
+          card.dataset.tags = series.tags.join(",");
+        }
 
         var images = series.images;
 
@@ -336,6 +344,120 @@
 
     // Build month navigation
     buildMonthNav(groups);
+
+    // Build tag filter
+    buildTagFilter();
+  }
+
+  // ---- Tag Filter ----
+  // Map of tag colors (must match CSS .tag-* classes)
+  var TAG_COLORS = {
+    "chalkboard": "#4a5568",
+    "oil painting": "#c53030",
+    "collage": "#2b6cb0",
+    "mixed media": "#c05621",
+    "craft": "#2f855a",
+    "3D sculpture": "#6b46c1",
+    "drawing": "#4c51bf",
+    "clay": "#975a16"
+  };
+
+  function buildTagFilter() {
+    tagFilter.innerHTML = "";
+
+    // Count tags
+    var tagCounts = {};
+    var total = currentSeries.length;
+    currentSeries.forEach(function (series) {
+      if (series.tags) {
+        series.tags.forEach(function (tg) {
+          tagCounts[tg] = (tagCounts[tg] || 0) + 1;
+        });
+      }
+    });
+
+    var tagKeys = Object.keys(tagCounts);
+    if (tagKeys.length === 0) return;
+
+    // Sort by count descending
+    tagKeys.sort(function (a, b) { return tagCounts[b] - tagCounts[a]; });
+
+    // "All" button
+    var allBtn = document.createElement("button");
+    allBtn.className = "tag-filter-btn-all" + (activeTag === null ? " active" : "");
+    allBtn.textContent = t("all") + " " + total;
+    allBtn.addEventListener("click", function () {
+      activeTag = null;
+      applyTagFilter();
+      updateFilterButtons();
+    });
+    tagFilter.appendChild(allBtn);
+
+    // Per-tag buttons
+    tagKeys.forEach(function (tg) {
+      var btn = document.createElement("button");
+      btn.className = "tag-filter-btn" + (activeTag === tg ? " active" : "");
+      btn.style.background = TAG_COLORS[tg] || "#7c5cbf";
+
+      var labelSpan = document.createElement("span");
+      labelSpan.textContent = t(tg);
+
+      var countSpan = document.createElement("span");
+      countSpan.className = "tag-count";
+      countSpan.textContent = tagCounts[tg];
+
+      btn.appendChild(labelSpan);
+      btn.appendChild(countSpan);
+      btn.dataset.tag = tg;
+
+      btn.addEventListener("click", function () {
+        activeTag = activeTag === tg ? null : tg;
+        applyTagFilter();
+        updateFilterButtons();
+      });
+
+      tagFilter.appendChild(btn);
+    });
+  }
+
+  function updateFilterButtons() {
+    var allBtn = tagFilter.querySelector(".tag-filter-btn-all");
+    if (allBtn) {
+      allBtn.classList.toggle("active", activeTag === null);
+    }
+    tagFilter.querySelectorAll(".tag-filter-btn").forEach(function (btn) {
+      btn.classList.toggle("active", btn.dataset.tag === activeTag);
+    });
+  }
+
+  function applyTagFilter() {
+    // Show/hide cards
+    var cards = gallery.querySelectorAll(".card");
+    cards.forEach(function (card) {
+      if (activeTag === null) {
+        card.classList.remove("tag-hidden");
+      } else {
+        var tags = (card.dataset.tags || "").split(",");
+        card.classList.toggle("tag-hidden", tags.indexOf(activeTag) === -1);
+      }
+    });
+
+    // Show/hide timeline groups if all their cards are hidden
+    var groups = gallery.querySelectorAll(".timeline-group");
+    groups.forEach(function (group) {
+      var visibleCards = group.querySelectorAll(".card:not(.tag-hidden)");
+      group.classList.toggle("tag-hidden", visibleCards.length === 0);
+    });
+
+    // Update month nav: hide pills for hidden groups
+    var pills = monthNav.querySelectorAll(".month-nav-pill");
+    pills.forEach(function (pill) {
+      var key = pill.dataset.month;
+      var group = document.getElementById("month-" + key);
+      if (group) {
+        pill.style.display = group.classList.contains("tag-hidden") ? "none" : "";
+      }
+    });
   }
 
   // ---- Month Navigation ----
