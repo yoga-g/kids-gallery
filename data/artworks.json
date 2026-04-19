@@ -14,6 +14,9 @@
         "caption": "Two big chalk friends — one in cool blue stripes, the other in playful pink — grinning under wild swirling skies with tiny flowers floating between them",
         "caption_zh": "两个大粉笔朋友——一个穿着酷酷的蓝色条纹，另一个穿着俏皮的粉红色——在狂野的旋转天空下咧嘴笑，小花在他们之间飘浮"
       }
+    ],
+    "content": [
+      "person"
     ]
   },
   {
@@ -46,6 +49,11 @@
         "caption": "Three buildings side by side — a neighborhood view",
         "caption_zh": "三栋建筑并排——邻里风景"
       }
+    ],
+    "content": [
+      "vehicle",
+      "house",
+      "person"
     ]
   },
   {
@@ -73,6 +81,9 @@
         "caption": "A blue suitcase rolling on a crosshatch track",
         "caption_zh": "一个蓝色行李箱在交叉线轨道上滚动"
       }
+    ],
+    "content": [
+      "object"
     ]
   },
   {
@@ -90,6 +101,10 @@
         "caption": "A colorful striped snake wrapping around an orange house",
         "caption_zh": "一条彩色条纹蛇缠绕着一座橙色房子"
       }
+    ],
+    "content": [
+      "animal",
+      "house"
     ]
   },
   {
@@ -107,6 +122,9 @@
         "caption": "A fierce red hermit crab in thick oil paint",
         "caption_zh": "一只凶猛的红色寄居蟹，用厚厚的油彩绘成"
       }
+    ],
+    "content": [
+      "animal"
     ]
   },
   {
@@ -124,6 +142,10 @@
         "caption": "A purple clock with numbers and a green clay turtle",
         "caption_zh": "一个紫色的时钟带数字和一只绿色黏土乌龟"
       }
+    ],
+    "content": [
+      "animal",
+      "object"
     ]
   },
   {
@@ -141,6 +163,9 @@
         "caption": "A bold magnifying glass made of cut paper and string, surrounded by clay germs in blue, red, and orange",
         "caption_zh": "一个用剪纸和绳子做的大胆放大镜，周围是蓝色、红色和橙色的黏土细菌"
       }
+    ],
+    "content": [
+      "object"
     ]
   },
   {
@@ -158,6 +183,9 @@
         "caption": "A bright red train built from geometric paper shapes and fuzzy pom-poms on a cheerful background",
         "caption_zh": "一辆鲜红色火车，用几何纸片和毛绒绒绒球搭建，背景欢快明亮"
       }
+    ],
+    "content": [
+      "vehicle"
     ]
   },
   {
@@ -175,6 +203,9 @@
         "caption": "A grinning white rabbit painted in heavy strokes on a golden yellow background, with tiny Ultraman stickers scattered around",
         "caption_zh": "一只咧嘴笑的白兔子用厚重的笔触画在金黄色背景上，周围散落着小奥特曼贴纸"
       }
+    ],
+    "content": [
+      "animal"
     ]
   },
   {
@@ -192,6 +223,9 @@
         "caption": "A yellow and green claw machine with buttons and a grabbing arm, built from layered paper and crayon lines",
         "caption_zh": "一台黄绿色夹娃娃机，有按钮和抓取臂，用分层纸和蜡笔线条搭建"
       }
+    ],
+    "content": [
+      "object"
     ]
   },
   {
@@ -209,6 +243,9 @@
         "caption": "Two round-faced old folks — one in green, one in orange — with spiky white clay hair on a deep red background",
         "caption_zh": "两个圆脸老人——一个穿绿色，一个穿橙色——白色黏土头发竖起，深红色背景"
       }
+    ],
+    "content": [
+      "person"
     ]
   },
   {
@@ -226,6 +263,9 @@
         "caption": "Five tall towers drawn in marker on blue arch-shaped paper, decorated with orange clay blobs and tiny details",
         "caption_zh": "五座高塔用马克笔画在蓝色拱形纸上，装饰着橙色黏土块和细小细节"
       }
+    ],
+    "content": [
+      "castle"
     ]
   },
   {
@@ -243,6 +283,9 @@
         "caption": "A zigzag book telling the story of sound through telephones — with clay buttons, marker drawings, and painted blobs",
         "caption_zh": "一本折叠书讲述电话传声的故事——有黏土按钮、马克笔画和颜料斑点"
       }
+    ],
+    "content": [
+      "object"
     ]
   },
   {
@@ -260,6 +303,9 @@
         "caption": "A red mitten and a magenta glove covered in pom-poms, with chalk bubbles floating all around on turquoise paper",
         "caption_zh": "一只红色连指手套和一只洋红色手套上满是绒球，粉笔泡泡在蓝绿色纸上漂浮"
       }
+    ],
+    "content": [
+      "object"
     ]
   },
   {
@@ -277,6 +323,10 @@
         "caption": "Fish and octopuses swimming through wavy blue waters, next to a page of rainbow-colored paper strips",
         "caption_zh": "鱼和章鱼在波浪蓝色海水中游泳，旁边是一页彩虹色纸条"
       }
+    ],
+    "content": [
+      "animal",
+      "nature"
     ]
   },
   {
@@ -294,6 +344,10 @@
         "caption": "Wild overlapping shapes in orange, pink, blue, and brown — an abstract cash register in Kandinsky style",
         "caption_zh": "橙色、粉色、蓝色和棕色的重叠形状——康定斯基风格的抽象收银机"
       }
+    ],
+    "content": [
+      "abstract",
+      "object"
     ]
   },
   {
@@ -311,6 +365,9 @@
         "caption": "Big white letters spelling \"Yoga\" painted on a swirly blue and green watercolor background",
         "caption_zh": "大白色字母拼写\"Yoga\"，画在蓝绿色水彩漩涡背景上"
       }
+    ],
+    "content": [
+      "abstract"
     ]
   },
   {
@@ -328,6 +385,9 @@
         "caption": "A big red paper bag decorated with sparkly rhinestones, colorful pockets, and a green handle",
         "caption_zh": "一个大红纸包，装饰着闪亮水钻、彩色口袋和绿色手柄"
       }
+    ],
+    "content": [
+      "object"
     ]
   },
   {
@@ -345,6 +405,10 @@
         "caption": "Three black clay ants with googly eyes hanging out inside a brown dirt ring on yellow paper",
         "caption_zh": "三只黑色黏土蚂蚁，长着大眼睛，在黄色纸上棕色泥土圈里玩耍"
       }
+    ],
+    "content": [
+      "animal",
+      "person"
     ]
   },
   {
@@ -362,6 +426,9 @@
         "caption": "A wild tangle of black lines, red spirals, and blue splashes — a car racing through a maze",
         "caption_zh": "黑色线条、红色螺旋和蓝色飞溅的狂野纠缠——一辆车在迷宫中飞驰"
       }
+    ],
+    "content": [
+      "vehicle"
     ]
   },
   {
@@ -379,6 +446,9 @@
         "caption": "Playful ladybugs and animal shapes in thick yellow, black, and green paint splats on white",
         "caption_zh": "俏皮的瓢虫和动物造型，用厚厚的黄色、黑色和绿色颜料在白色上泼溅"
       }
+    ],
+    "content": [
+      "animal"
     ]
   },
   {
@@ -396,6 +466,9 @@
         "caption": "Three colorful figures made of layered paper and clay, connected by sparkling blue rhinestone chains on a red background",
         "caption_zh": "三个彩色人物由层叠纸和黏土制成，用闪闪发光的蓝色水钻链连接在红色背景上"
       }
+    ],
+    "content": [
+      "person"
     ]
   },
   {
@@ -418,6 +491,9 @@
         "caption": "A long chalk car cruising under flowers and magnets",
         "caption_zh": "一辆长长的粉笔车在花朵和磁铁下行驶"
       }
+    ],
+    "content": [
+      "vehicle"
     ]
   },
   {
@@ -435,6 +511,10 @@
         "caption": "A dark swirling mass of black and brown paint with fiery red splashes — a bold vision of deep space",
         "caption_zh": "黑色和棕色颜料的旋涡，配有火红色飞溅——深空的大胆画面"
       }
+    ],
+    "content": [
+      "abstract",
+      "nature"
     ]
   },
   {
@@ -457,6 +537,9 @@
         "caption": "More colorful clay flowers and paper arrows connected by orange string — the back view",
         "caption_zh": "更多彩色黏土花和纸箭头用橙色绳子连接——背面视角"
       }
+    ],
+    "content": [
+      "abstract"
     ]
   },
   {
@@ -494,6 +577,10 @@
         "caption": "Another angle showing the full house with sticks poking out like hedgehog spines",
         "caption_zh": "另一个角度展示整座房子，树枝像刺猬的刺一样伸出"
       }
+    ],
+    "content": [
+      "animal",
+      "house"
     ]
   },
   {
@@ -516,6 +603,9 @@
         "caption": "Clay figures and pom-poms scattered across a canvas with blue pencil lines and a painted heart",
         "caption_zh": "黏土人物和绒球散布在画布上，配有蓝色铅笔线条和一颗画的心"
       }
+    ],
+    "content": [
+      "abstract"
     ]
   },
   {
@@ -533,6 +623,10 @@
         "caption": "A big watermelon slice towering over a red and blue neighborhood, drawn in bold crayon strokes",
         "caption_zh": "一大片西瓜高耸在红蓝社区上方，用粗蜡笔画成"
       }
+    ],
+    "content": [
+      "house",
+      "food"
     ]
   },
   {
@@ -550,6 +644,9 @@
         "caption": "A wild orange and black Nian beast with pom-pom eyes, surrounded by gems and sparkles on a pink background",
         "caption_zh": "一只狂野的橙黑色年兽，绒球眼睛，粉色背景上围绕着宝石和闪光"
       }
+    ],
+    "content": [
+      "animal"
     ]
   },
   {
@@ -572,6 +669,10 @@
         "caption": "Colorful clay boats lined up on a painted surface — blue, pink, red, and green",
         "caption_zh": "彩色黏土船在画面上排列——蓝色、粉色、红色和绿色"
       }
+    ],
+    "content": [
+      "vehicle",
+      "nature"
     ]
   },
   {
@@ -589,6 +690,10 @@
         "caption": "A lively boat scene buzzing with music notes, giraffes, and swirling patterns on a bright yellow background",
         "caption_zh": "一个热闹的船只场景，充满音符、长颈鹿和漩涡图案，明亮黄色背景"
       }
+    ],
+    "content": [
+      "vehicle",
+      "animal"
     ]
   },
   {
@@ -606,6 +711,9 @@
         "caption": "A busy yellow and green sock shop with bold brushstrokes, red flowers, and a stormy blue-green sky",
         "caption_zh": "一家繁忙的黄绿色袜子店，粗犷笔触、红色花朵和暴风蓝绿色天空"
       }
+    ],
+    "content": [
+      "house"
     ]
   },
   {
@@ -623,6 +731,10 @@
         "caption": "A yellow earthworm curling through purple and brown earth under a dramatic red sky",
         "caption_zh": "一条黄色蚯蚓在紫色和棕色土壤中蜿蜒，上方是戏剧性的红色天空"
       }
+    ],
+    "content": [
+      "animal",
+      "nature"
     ]
   },
   {
@@ -640,6 +752,10 @@
         "caption": "Brown squirrels climbing around a green house decorated with numbers, dots, and a Christmas tree on top",
         "caption_zh": "棕色松鼠爬在绿色房子周围，装饰着数字、圆点和顶上的圣诞树"
       }
+    ],
+    "content": [
+      "animal",
+      "house"
     ]
   },
   {
@@ -657,6 +773,9 @@
         "caption": "A pink and green kitchen scene with clay peas, garlic, and a big green leaf on swirly painted background",
         "caption_zh": "粉绿色厨房场景，有黏土豌豆、大蒜和一片大绿叶在漩涡颜料背景上"
       }
+    ],
+    "content": [
+      "food"
     ]
   },
   {
@@ -674,6 +793,10 @@
         "caption": "A little pink clay person with button eyes standing on a dark rocky hill by the sea",
         "caption_zh": "一个小粉色黏土人，有纽扣眼睛，站在海边的深色岩石山丘上"
       }
+    ],
+    "content": [
+      "castle",
+      "person"
     ]
   },
   {
@@ -691,6 +814,10 @@
         "caption": "A paper-cut kid with a big smile peeking into the brown dirt ring where two clay ants live",
         "caption_zh": "一个笑容满面的剪纸小孩探头看棕色泥土圈里住着的两只黏土蚂蚁"
       }
+    ],
+    "content": [
+      "animal",
+      "person"
     ]
   },
   {
@@ -699,13 +826,18 @@
     "date": "2026-04-19",
     "description": "Bold red and blue marker drawing of a tank with cannons and a tiny crew",
     "description_zh": "红蓝马克笔大胆绘制的坦克大炮，配有小小的乘员",
-    "tags": ["drawing"],
+    "tags": [
+      "drawing"
+    ],
     "images": [
       {
         "file": "2026-4-19_yoga坦克大炮.jpg",
         "caption": "A massive red tank bristling with spotted cannons and blue gun barrels, with a little figure riding on top and numbers scrawled everywhere",
         "caption_zh": "一辆巨大的红色坦克，布满斑点炮管和蓝色枪管，一个小人骑在上面，数字到处都是"
       }
+    ],
+    "content": [
+      "vehicle"
     ]
   },
   {
@@ -714,7 +846,9 @@
     "date": "2026-01-06",
     "description": "Cut-out paper horse painted in cool grey-blue with a colorful saddle",
     "description_zh": "剪纸马，用冷灰蓝色颜料绘制，配有彩色马鞍",
-    "tags": ["craft"],
+    "tags": [
+      "craft"
+    ],
     "images": [
       {
         "file": "2026-1-6_Yoga_马_p1.jpg",
@@ -726,6 +860,9 @@
         "caption": "The horse from above, wearing a bright yellow and green clay saddle with a pink clip — top view",
         "caption_zh": "从上方俯瞰这匹马，戴着明亮的黄绿色黏土马鞍和粉色夹子——俯视"
       }
+    ],
+    "content": [
+      "animal"
     ]
   }
 ]
