@@ -381,7 +381,7 @@
     });
   }
 
-  // ==== CONTENT WORD CLOUD ====
+  // ==== CONTENT TAGS ====
   function buildContentCloud() {
     contentCloud.innerHTML = "";
     var counts = {};
@@ -390,20 +390,19 @@
     });
     var keys = Object.keys(counts);
     if (!keys.length) return;
-    // Shuffle for cloud feel then sort by count desc for visual weight
     keys.sort(function (a, b) { return counts[b] - counts[a]; });
-    var maxC = Math.max.apply(null, keys.map(function (k) { return counts[k]; }));
-    var minC = Math.min.apply(null, keys.map(function (k) { return counts[k]; }));
-    var range = maxC - minC || 1;
 
     keys.forEach(function (c) {
       var word = document.createElement("button");
       word.className = "cc-word" + (filterState.content === c ? " active" : "");
-      word.textContent = t(c);
       word.dataset.content = c;
-      // Font size: 0.72rem to 1.05rem (subtle variation)
-      var size = 0.72 + 0.33 * ((counts[c] - minC) / range);
-      word.style.fontSize = size.toFixed(2) + "rem";
+      var lbl = document.createElement("span");
+      lbl.textContent = t(c);
+      var cnt = document.createElement("span");
+      cnt.className = "cc-count";
+      cnt.textContent = counts[c];
+      word.appendChild(lbl);
+      word.appendChild(cnt);
       word.addEventListener("click", function () {
         setFilter("content", filterState.content === c ? null : c);
       });
