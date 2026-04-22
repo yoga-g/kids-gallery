@@ -86,7 +86,7 @@ body {
 
 .timeline-track {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 0;
   position: relative;
   min-width: min-content;
@@ -105,6 +105,36 @@ body {
   position: relative;
   flex-shrink: 0;
   transition: all 0.2s ease;
+}
+
+/* Fixed-height container keeps all month nodes vertically aligned along a shared
+   baseline (bar-wrap bottom = baseline). Bar grows upward from the baseline;
+   month label sits below. This guarantees bar & label are always centered on
+   the same vertical axis regardless of bar height. */
+.tl-bar-wrap {
+  width: 4px;
+  height: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.tl-bar {
+  width: 4px;
+  background: #c4b3e0;
+  border-radius: 2px 2px 0 0;
+  transition: all 0.2s ease;
+}
+
+.tl-node:hover .tl-bar {
+  background: #7c5cbf;
+}
+
+.tl-node.active .tl-bar {
+  background: #7c5cbf;
+  box-shadow: 0 0 0 2px rgba(124, 92, 191, 0.25);
 }
 
 .tl-dot {
@@ -133,6 +163,8 @@ body {
   font-size: 0.58rem;
   color: #aaa;
   margin-top: 0.2rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
   white-space: nowrap;
   transition: all 0.2s ease;
 }
@@ -144,15 +176,17 @@ body {
   font-weight: 700;
 }
 
-/* Connecting line between nodes */
+/* Baseline offset = label height (0.7rem) + label margin-top (0.2rem) = 0.9rem
+   Line/year-label sit on the bar baseline (top edge of tl-label). */
 .tl-line {
   flex-shrink: 0;
   width: 10px;
   height: 2px;
   background: #d8cef0;
+  align-self: flex-end;
+  margin-bottom: 0.9rem;
 }
 
-/* Year label divider */
 .tl-year-label {
   flex-shrink: 0;
   font-size: 0.6rem;
@@ -160,6 +194,8 @@ body {
   color: #7c5cbf;
   padding: 0 0.3rem;
   white-space: nowrap;
+  align-self: flex-end;
+  margin-bottom: 0.9rem;
 }
 
 .tl-year-gap {
@@ -168,10 +204,15 @@ body {
   height: 2px;
   background: transparent;
   border-top: 2px dashed #d8cef0;
-  margin: 0 2px;
+  margin: 0 2px 0.9rem 2px;
+  align-self: flex-end;
 }
 
-/* "All" node */
+/* "All" node — keep dot style, centered in the 28px bar-wrap */
+.tl-node-all .tl-bar-wrap {
+  align-items: center; /* vertically center the dot within the bar slot */
+}
+
 .tl-node-all .tl-dot {
   width: 11px;
   height: 11px;
@@ -188,6 +229,45 @@ body {
 .tl-node-all.active .tl-dot {
   box-shadow: 0 0 0 3px rgba(124, 92, 191, 0.25);
 }
+
+/* ===== Tooltip on timeline nodes ===== */
+.tl-node[data-tooltip]:hover::after,
+.tl-node[data-tooltip]:focus::after,
+.tl-node[data-tooltip]:focus-visible::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #7c5cbf;
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(124, 92, 191, 0.25);
+  border: 1px solid rgba(124, 92, 191, 0.15);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.tl-node[data-tooltip]:hover::before,
+.tl-node[data-tooltip]:focus::before,
+.tl-node[data-tooltip]:focus-visible::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #fff;
+  filter: drop-shadow(0 1px 1px rgba(124, 92, 191, 0.2));
+  pointer-events: none;
+  z-index: 10;
+}
+
+.tl-node:focus { outline: none; }
 
 /* ===== Medium Filter ===== */
 .medium-filter {
@@ -416,6 +496,16 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+.timeline-count {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #a78bda;
+  line-height: 1.2;
+  margin-top: 0.25rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
 .timeline-cards {
   grid-column: 3;
   column-count: 2;
@@ -603,6 +693,9 @@ body.dark .filter-bar {
 body.dark .tl-dot { border-color: #6a5a8a; background: #2a2a40; }
 body.dark .tl-node:hover .tl-dot { border-color: #b8a4e0; background: #3a3a55; }
 body.dark .tl-node.active .tl-dot { background: #7c5cbf; border-color: #7c5cbf; }
+body.dark .tl-bar { background: #6a5a8a; }
+body.dark .tl-node:hover .tl-bar { background: #b8a4e0; }
+body.dark .tl-node.active .tl-bar { background: #7c5cbf; box-shadow: 0 0 0 2px rgba(184, 164, 224, 0.25); }
 body.dark .tl-label { color: #666; }
 body.dark .tl-node.active .tl-label { color: #b8a4e0; }
 body.dark .tl-node-all .tl-dot { background: #7c5cbf; border-color: #7c5cbf; }
@@ -610,6 +703,20 @@ body.dark .tl-node-all .tl-label { color: #b8a4e0; }
 body.dark .tl-line { background: #4a3a6e; }
 body.dark .tl-year-label { color: #b8a4e0; }
 body.dark .tl-year-gap { border-top-color: #4a3a6e; }
+
+body.dark .tl-node[data-tooltip]:hover::after,
+body.dark .tl-node[data-tooltip]:focus::after,
+body.dark .tl-node[data-tooltip]:focus-visible::after {
+  background: #2a2a40;
+  color: #b8a4e0;
+  border-color: rgba(184, 164, 224, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+body.dark .tl-node[data-tooltip]:hover::before,
+body.dark .tl-node[data-tooltip]:focus::before,
+body.dark .tl-node[data-tooltip]:focus-visible::before {
+  border-top-color: #2a2a40;
+}
 
 body.dark .cc-word { color: #8a7aaa; border-color: #4a4a6a; background: transparent; }
 body.dark .cc-word:hover { color: #b8a4e0; border-color: #7c5cbf; background: #2a2a40; }
@@ -631,6 +738,7 @@ body.dark .timeline-group::before { background: linear-gradient(to bottom, #4a3a
 body.dark .timeline-group::after { background: #7c5cbf; }
 body.dark .timeline-month { color: #b8a4e0; }
 body.dark .timeline-year { color: #8a7aaa; }
+body.dark .timeline-count { color: #8a7aaa; }
 body.dark .empty-state { color: #666; }
 body.dark .site-footer { color: #666; }
 body.dark .site-footer .copyright { color: #777; }
@@ -647,10 +755,19 @@ body.dark .site-footer .copyright-notice { color: #666; }
   .tl-node { padding: 0 0.2rem; }
   .tl-dot { width: 7px; height: 7px; }
   .tl-node-all .tl-dot { width: 9px; height: 9px; }
-  .tl-label { font-size: 0.48rem; }
-  .tl-line { width: 6px; }
-  .tl-year-label { font-size: 0.52rem; padding: 0 0.15rem; }
-  .tl-year-gap { width: 4px; }
+  .tl-bar-wrap { width: 3px; height: 20px; }
+  .tl-bar { width: 3px; }
+  .tl-label { font-size: 0.48rem; height: 0.58rem; line-height: 0.58rem; }
+  .tl-line { width: 6px; margin-bottom: 0.78rem; }
+  .tl-year-label { font-size: 0.52rem; padding: 0 0.15rem; margin-bottom: 0.78rem; }
+  .tl-year-gap { width: 4px; margin-bottom: 0.78rem; }
+
+  .tl-node[data-tooltip]:hover::after,
+  .tl-node[data-tooltip]:focus::after,
+  .tl-node[data-tooltip]:focus-visible::after {
+    font-size: 0.55rem;
+    padding: 0.2rem 0.4rem;
+  }
 
   .medium-filter { padding: 0.25rem 0.5rem 0; gap: 0.25rem; }
   .mf-btn { padding: 0.15rem 0.45rem; font-size: 0.6rem; }
@@ -671,6 +788,7 @@ body.dark .site-footer .copyright-notice { color: #666; }
   .timeline-label { padding-right: 0.3rem; }
   .timeline-month { font-size: 0.55rem; }
   .timeline-year { font-size: 0.6rem; }
+  .timeline-count { font-size: 0.52rem; margin-top: 0.2rem; }
   .timeline-cards { column-count: 2; column-gap: 0.6rem; padding-left: 0.4rem; }
   .card { margin-bottom: 0.6rem; border-radius: 8px; }
   .card > img { border-radius: 8px 8px 0 0; }

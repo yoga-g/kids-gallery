@@ -10,6 +10,8 @@
   var currentLang   = "en";
   var scrollObserver = null;
   var monthKeys     = [];
+  var monthCounts   = {};
+  var totalCount    = 0;
 
   // ---- Filter state ----
   var filterState = { month: null, medium: null, content: null };
@@ -25,6 +27,9 @@
       empty: "No artworks yet — stay tuned!",
       all: "All",
       clear_all: "Clear all",
+      tooltip_piece: "piece",
+      tooltip_pieces: "pieces",
+      tooltip_all: "All",
       chalkboard: "chalkboard", "oil painting": "oil painting", collage: "collage",
       "mixed media": "mixed media", craft: "craft", "3D sculpture": "3D sculpture",
       drawing: "drawing", clay: "clay",
@@ -40,6 +45,9 @@
       empty: "还没有作品——敬请期待！",
       all: "全部",
       clear_all: "清除全部",
+      tooltip_piece: "件",
+      tooltip_pieces: "件",
+      tooltip_all: "全部",
       chalkboard: "黑板画", "oil painting": "油画", collage: "拼贴",
       "mixed media": "混合媒材", craft: "手工", "3D sculpture": "3D雕塑",
       drawing: "绘画", clay: "黏土",
@@ -114,6 +122,24 @@
   function monthLabel(key) {
     var p = parseMonthKey(key);
     return p.month + " " + p.year;
+  }
+
+  function formatCount(count) {
+    var word = count === 1 ? t("tooltip_piece") : t("tooltip_pieces");
+    return count + " " + word;
+  }
+
+  function formatTooltip(key, count) {
+    var p = parseMonthKey(key);
+    if (currentLang === "zh") {
+      var mNum = parseInt(key.split("-")[1], 10);
+      return p.year + " 年 " + mNum + " 月 · " + count + " " + t("tooltip_pieces");
+    }
+    return p.month + " " + p.year + " · " + formatCount(count);
+  }
+
+  function formatAllTooltip(count) {
+    return t("tooltip_all") + " · " + formatCount(count);
   }
 
   function tagClass(tag) { return "tag-" + tag.toLowerCase().replace(/\s+/g, "-"); }
@@ -210,6 +236,10 @@
     });
 
     monthKeys = Array.from(groups.keys());
+    monthCounts = {};
+    groups.forEach(function (items, key) { monthCounts[key] = items.length; });
+    totalCount = currentSeries.length;
+
     var fragment = document.createDocumentFragment();
 
     groups.forEach(function (items, key) {
@@ -220,7 +250,10 @@
 
       var label = document.createElement("div");
       label.className = "timeline-label";
-      label.innerHTML = '<div class="timeline-month">' + parsed.month + '</div><div class="timeline-year">' + parsed.year + '</div>';
+      label.innerHTML =
+        '<div class="timeline-month">' + parsed.month + '</div>' +
+        '<div class="timeline-year">' + parsed.year + '</div>' +
+        '<div class="timeline-count">' + formatCount(items.length) + '</div>';
 
       var cardsWrap = document.createElement("div");
       cardsWrap.className = "timeline-cards";
@@ -298,10 +331,21 @@
     var track = timelineNav.querySelector(".timeline-track");
     track.innerHTML = "";
 
+    // Compute bar height mapping (sqrt scale, 6-28px)
+    var counts = monthKeys.map(function (k) { return monthCounts[k] || 0; });
+    var maxCount = counts.length ? Math.max.apply(null, counts) : 1;
+    if (!maxCount) maxCount = 1;
+    var MIN_H = 6, MAX_H = 28;
+    function heightFor(count) {
+      return MIN_H + (MAX_H - MIN_H) * Math.sqrt(count / maxCount);
+    }
+
     // "All" node
     var allNode = document.createElement("div");
     allNode.className = "tl-node tl-node-all" + (filterState.month === null ? " active" : "");
-    allNode.innerHTML = '<div class="tl-dot"></div><div class="tl-label">' + t("all") + '</div>';
+    allNode.setAttribute("tabindex", "0");
+    allNode.setAttribute("data-tooltip", formatAllTooltip(totalCount));
+    allNode.innerHTML = '<div class="tl-bar-wrap"><div class="tl-dot"></div></div><div class="tl-label">' + t("all") + '</div>';
     allNode.addEventListener("click", function () { setFilter("month", null); });
     track.appendChild(allNode);
 
@@ -324,16 +368,24 @@
         lastYear = p.year;
       }
 
-      // line segment
+      // line segment (baseline between bars)
       var line = document.createElement("div");
       line.className = "tl-line";
       track.appendChild(line);
 
-      // month node (show only short month name, no year)
+      // month node with vertical bar (height = count)
+      var count = monthCounts[key] || 0;
+      var h = heightFor(count);
       var node = document.createElement("div");
       node.className = "tl-node" + (filterState.month === key ? " active" : "");
       node.dataset.month = key;
-      node.innerHTML = '<div class="tl-dot"></div><div class="tl-label">' + p.month + '</div>';
+      node.setAttribute("tabindex", "0");
+      node.setAttribute("data-tooltip", formatTooltip(key, count));
+      node.innerHTML =
+        '<div class="tl-bar-wrap">' +
+          '<div class="tl-bar" style="height:' + h.toFixed(1) + 'px"></div>' +
+        '</div>' +
+        '<div class="tl-label">' + p.month + '</div>';
       node.addEventListener("click", function () {
         setFilter("month", filterState.month === key ? null : key);
       });
