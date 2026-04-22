@@ -885,5 +885,114 @@
       "house",
       "nature"
     ]
+  },
+  {
+    "title": "Painted Elephant",
+    "title_zh": "拼贴大象",
+    "date": "2025-06-24",
+    "description": "Cut-paper elephant textured in grey-blue paint with crayon patches on yellow-green",
+    "description_zh": "灰蓝色涂彩的剪纸大象贴在黄绿色底纸上，周围散落紫色和橙色的蜡笔色块",
+    "tags": [
+      "collage"
+    ],
+    "images": [
+      {
+        "file": "2025-6-24_Yoga_大象.jpg",
+        "caption": "A big grey-blue elephant cut out of painted paper with googly eyes and floppy ears, surrounded by purple and orange crayon blobs on a bright yellow-green background",
+        "caption_zh": "一头大大的灰蓝色剪纸大象，长着大眼睛和耷拉的耳朵，周围是紫色和橙色的蜡笔块，背景是明亮的黄绿色"
+      }
+    ],
+    "content": [
+      "animal"
+    ]
+  },
+  {
+    "title": "Lion Face",
+    "title_zh": "狮子脸",
+    "date": "2025-09-09",
+    "description": "Wild lion portrait in thick yellow paint with pipe-cleaner and straw mane",
+    "description_zh": "厚厚的黄色颜料画的狮子脸，毛绒扭扭棒和彩色吸管做成狂野的鬃毛",
+    "tags": [
+      "mixed media"
+    ],
+    "images": [
+      {
+        "file": "2025-9-9_Yoga_狮子.jpg",
+        "caption": "A bold lion face painted in thick yellow oil paint with big googly eyes, a yellow paper nose, pink cheeks, and a red mouth — surrounded by orange swirls and blue and green bendy straws forming a crazy mane",
+        "caption_zh": "一张大胆的狮子脸，用厚厚的黄色油彩画成，配着大大的活动眼珠、黄色纸鼻子、粉色腮红和红色嘴唇，周围是橙色颜料漩涡和蓝绿色的扭扭吸管组成的狂野鬃毛"
+      }
+    ],
+    "content": [
+      "animal"
+    ]
+  },
+  {
+    "title": "Dinosaur Oil Painting",
+    "title_zh": "恐龙油画",
+    "date": "2026-04-14",
+    "description": "Two expressive oil paintings of abstract dinosaurs with clay limbs",
+    "description_zh": "两幅表现主义油画，抽象的恐龙配有黏土四肢",
+    "tags": [
+      "oil painting"
+    ],
+    "images": [
+      {
+        "file": "2026-4-14_Yoga_恐龙_p1.jpg",
+        "caption": "An abstract dinosaur shape swirling in red, orange, yellow, and teal brushstrokes with green and red clay limbs stuck on top",
+        "caption_zh": "抽象的恐龙身形在红、橙、黄和青绿色笔触中旋转，身上贴着绿色和红色的黏土四肢"
+      },
+      {
+        "file": "2026-4-14_Yoga_恐龙_p2.jpg",
+        "caption": "A second dinosaur study — bold orange and green paint strokes with a chunky clay figure striding across the canvas",
+        "caption_zh": "恐龙系列的第二幅——大胆的橙绿色笔触，一个粗犷的黏土人形大步跨过画面"
+      }
+    ],
+    "content": [
+      "animal",
+      "abstract"
+    ]
+  },
+  {
+    "title": "Neighborhood & Numbers",
+    "title_zh": "街区和数字",
+    "date": "2026-04-21",
+    "description": "Blue marker cityscape of houses with a green figure climbing in a number tower",
+    "description_zh": "蓝色马克笔画的房屋街区，右边一个绿色小人爬在数字塔里",
+    "tags": [
+      "drawing"
+    ],
+    "images": [
+      {
+        "file": "2026-4-21_Yoga_房子.jpg",
+        "caption": "A row of angular blue marker houses — a stepped building, a tall gabled house, zigzag fences, and on the right a tower with 1-2-3-4-5-6 written across it and a stick-figure green person reaching up inside",
+        "caption_zh": "一排用蓝色马克笔画的棱角分明的房子——阶梯状建筑、高高的尖顶屋、锯齿形围栏，右边是一座塔，塔上写着 1-2-3-4-5-6，里面一个绿色火柴人正向上伸手"
+      }
+    ],
+    "content": [
+      "house",
+      "person"
+    ]
+  },
+  {
+    "title": "Going Hiking",
+    "title_zh": "去爬山",
+    "date": "2026-04-08",
+    "description": "Round canvas painting of a blue creature climbing past dark mountains",
+    "description_zh": "圆形画布上的油画——一只蓝色大头生物翻越深色山峦",
+    "tags": [
+      "oil painting"
+    ],
+    "images": [
+      {
+        "file": "2026-4-8_Yoga_去爬山.jpg",
+        "caption": "A round yellow canvas with a big blue blob creature with shiny teal gem eyes trailing a long brushstroke body, dark zigzag mountains behind, a tiny red-and-white hiker figure, and pink flower blobs scattered in the foreground",
+        "caption_zh": "一块圆形黄色画布上，一只大大的蓝色色块生物长着闪亮的青绿色宝石眼睛，身后拖着长长的笔触身体，深色锯齿形山峦矗立在后方，一个红白色的小人影在爬山，前景散布着粉色花朵"
+      }
+    ],
+    "content": [
+      "animal",
+      "nature",
+      "person"
+    ]
   }
 ]
