@@ -393,6 +393,46 @@
     });
 
     enableDragScroll(timelineNav);
+    bindTimelineTooltip();
+  }
+
+  // ---- Tooltip (rendered into body to escape overflow/stacking clips) ----
+  var tooltipEl = null;
+  var tooltipGlobalBound = false;
+  function getTooltipEl() {
+    if (!tooltipEl) {
+      tooltipEl = document.createElement("div");
+      tooltipEl.className = "tl-tooltip";
+      document.body.appendChild(tooltipEl);
+    }
+    return tooltipEl;
+  }
+  function showTooltip(node) {
+    var text = node.getAttribute("data-tooltip");
+    if (!text) return;
+    var tip = getTooltipEl();
+    tip.textContent = text;
+    var rect = node.getBoundingClientRect();
+    tip.style.left = (rect.left + rect.width / 2) + "px";
+    tip.style.top = (rect.bottom + 6) + "px";
+    tip.classList.add("is-visible");
+  }
+  function hideTooltip() {
+    if (tooltipEl) tooltipEl.classList.remove("is-visible");
+  }
+  function bindTimelineTooltip() {
+    var nodes = timelineNav.querySelectorAll(".tl-node[data-tooltip]");
+    nodes.forEach(function (node) {
+      node.addEventListener("mouseenter", function () { showTooltip(node); });
+      node.addEventListener("mouseleave", hideTooltip);
+      node.addEventListener("focus", function () { showTooltip(node); });
+      node.addEventListener("blur", hideTooltip);
+    });
+    if (!tooltipGlobalBound) {
+      timelineNav.addEventListener("scroll", hideTooltip, { passive: true });
+      window.addEventListener("scroll", hideTooltip, { passive: true });
+      tooltipGlobalBound = true;
+    }
   }
 
   function enableDragScroll(el) {

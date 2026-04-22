@@ -230,41 +230,53 @@ body {
   box-shadow: 0 0 0 3px rgba(124, 92, 191, 0.25);
 }
 
-/* ===== Tooltip on timeline nodes ===== */
-.tl-node[data-tooltip]:hover::after,
-.tl-node[data-tooltip]:focus::after,
-.tl-node[data-tooltip]:focus-visible::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: calc(100% + 6px);
-  left: 50%;
-  transform: translateX(-50%);
+/* ===== Tooltip for timeline nodes =====
+   Rendered into <body> by JS (not a pseudo-element) to escape the
+   sticky .filter-bar stacking context and .timeline-nav overflow clip. */
+.tl-tooltip {
+  position: fixed;
+  z-index: 2000;
+  pointer-events: none;
   background: #fff;
   color: #7c5cbf;
   font-size: 0.62rem;
   font-weight: 600;
-  padding: 0.25rem 0.5rem;
+  padding: 0.28rem 0.55rem;
   border-radius: 6px;
   white-space: nowrap;
   box-shadow: 0 2px 10px rgba(124, 92, 191, 0.25);
   border: 1px solid rgba(124, 92, 191, 0.15);
-  pointer-events: none;
-  z-index: 10;
+  opacity: 0;
+  transform: translate(-50%, 4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
-.tl-node[data-tooltip]:hover::before,
-.tl-node[data-tooltip]:focus::before,
-.tl-node[data-tooltip]:focus-visible::before {
+.tl-tooltip.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.tl-tooltip::after {
   content: "";
   position: absolute;
-  bottom: calc(100% + 2px);
+  top: -4px;
   left: 50%;
   transform: translateX(-50%);
   border: 4px solid transparent;
-  border-top-color: #fff;
-  filter: drop-shadow(0 1px 1px rgba(124, 92, 191, 0.2));
-  pointer-events: none;
-  z-index: 10;
+  border-top: 0;
+  border-bottom-color: #fff;
+  filter: drop-shadow(0 -1px 1px rgba(124, 92, 191, 0.15));
+}
+
+body.dark .tl-tooltip {
+  background: #2a2a40;
+  color: #b8a4e0;
+  border-color: rgba(184, 164, 224, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .tl-tooltip::after {
+  border-bottom-color: #2a2a40;
 }
 
 .tl-node:focus { outline: none; }
@@ -704,20 +716,6 @@ body.dark .tl-line { background: #4a3a6e; }
 body.dark .tl-year-label { color: #b8a4e0; }
 body.dark .tl-year-gap { border-top-color: #4a3a6e; }
 
-body.dark .tl-node[data-tooltip]:hover::after,
-body.dark .tl-node[data-tooltip]:focus::after,
-body.dark .tl-node[data-tooltip]:focus-visible::after {
-  background: #2a2a40;
-  color: #b8a4e0;
-  border-color: rgba(184, 164, 224, 0.2);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-body.dark .tl-node[data-tooltip]:hover::before,
-body.dark .tl-node[data-tooltip]:focus::before,
-body.dark .tl-node[data-tooltip]:focus-visible::before {
-  border-top-color: #2a2a40;
-}
-
 body.dark .cc-word { color: #8a7aaa; border-color: #4a4a6a; background: transparent; }
 body.dark .cc-word:hover { color: #b8a4e0; border-color: #7c5cbf; background: #2a2a40; }
 body.dark .cc-word.active { color: #fff; background: #7c5cbf; border-color: #7c5cbf; }
@@ -762,11 +760,9 @@ body.dark .site-footer .copyright-notice { color: #666; }
   .tl-year-label { font-size: 0.52rem; padding: 0 0.15rem; margin-bottom: 0.78rem; }
   .tl-year-gap { width: 4px; margin-bottom: 0.78rem; }
 
-  .tl-node[data-tooltip]:hover::after,
-  .tl-node[data-tooltip]:focus::after,
-  .tl-node[data-tooltip]:focus-visible::after {
+  .tl-tooltip {
     font-size: 0.55rem;
-    padding: 0.2rem 0.4rem;
+    padding: 0.22rem 0.42rem;
   }
 
   .medium-filter { padding: 0.25rem 0.5rem 0; gap: 0.25rem; }
