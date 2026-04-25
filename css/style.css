@@ -541,14 +541,15 @@ body.dark .tl-tooltip::after {
 
 .timeline-cards {
   grid-column: 3;
-  column-count: 2;
-  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   padding: 0.3rem 0 1.5rem 0.6rem;
+  align-items: start;
 }
 
 /* ===== Card ===== */
 .card {
-  break-inside: avoid;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -556,7 +557,8 @@ body.dark .tl-tooltip::after {
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -572,10 +574,14 @@ body.dark .tl-tooltip::after {
   pointer-events: none;
 }
 
+/* Single-image card: keep natural aspect ratio (object-fit: contain never
+   distorts). Grid will auto-align card heights per row; shorter images
+   show the card background below, matching the card-grid treatment. */
 .card > img {
   width: 100%;
   display: block;
   border-radius: 10px 10px 0 0;
+  background: #f5f3f0;
 }
 
 .card > img[data-src],
@@ -820,7 +826,7 @@ body.dark .site-footer .contact a { color: #b8a4e0; }
   .timeline-month { font-size: 0.55rem; }
   .timeline-year { font-size: 0.6rem; }
   .timeline-count { font-size: 0.52rem; margin-top: 0.2rem; }
-  .timeline-cards { column-count: 2; column-gap: 0.6rem; padding-left: 0.4rem; }
+  .timeline-cards { gap: 0.6rem; padding-left: 0.4rem; }
   .card { margin-bottom: 0.6rem; border-radius: 8px; }
   .card > img { border-radius: 8px 8px 0 0; }
   .card-info { padding: 0.4rem 0.5rem; }
@@ -837,5 +843,5 @@ body.dark .site-footer .contact a { color: #b8a4e0; }
 }
 
 @media (min-width: 900px) {
-  .timeline-cards { column-count: 3; }
+  .timeline-cards { grid-template-columns: repeat(3, 1fr); }
 }
