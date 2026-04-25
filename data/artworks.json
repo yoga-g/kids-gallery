@@ -994,5 +994,49 @@
       "nature",
       "person"
     ]
+  },
+  {
+    "title": "City Overview",
+    "title_zh": "城市俯瞰",
+    "date": "2026-04-25",
+    "description": "Marker drawing of a bustling city: a mushroom-domed building, a long green pavilion, colorful sunbursts and a rainbow trail winding through plants",
+    "description_zh": "马克笔绘制的繁忙城市：一座蘑菇顶建筑、一座绿色长条亭馆、绚丽的太阳光束与一条蜿蜒穿过植物的彩虹轨道",
+    "tags": [
+      "drawing"
+    ],
+    "images": [
+      {
+        "file": "2026-4-25_Yoga_City.jpg",
+        "caption": "A mushroom-capped orange building rises on the left beside a long green pavilion with blue windows and a purple chair inside; a red fence runs across the foreground, while purple wave patterns and red-orange sunbeams radiate behind. A tiny castle with a purple roof sits in the upper right, trailed by a row of little creatures",
+        "caption_zh": "左侧一座蘑菇顶橙色建筑与一座绿色长条亭馆相邻，亭内有蓝色窗户和紫色椅子；前景横着一道红色栅栏，背景中紫色波浪与橘红色阳光向外辐射。右上角一座紫顶小城堡，身后跟着一排小生灵"
+      }
+    ],
+    "content": [
+      "house",
+      "castle",
+      "animal",
+      "nature"
+    ]
+  },
+  {
+    "title": "City Sunset",
+    "title_zh": "城市黄昏",
+    "date": "2026-04-25",
+    "description": "A second view of the same city at sunset — the mushroom-topped building and the green pavilion stand under swirling purple clouds and a warm red-orange sky",
+    "description_zh": "同一座城市的黄昏景色——蘑菇顶建筑与绿色长条亭馆静立其间，上方是盘旋的紫色云团和暖橘红色的天空",
+    "tags": [
+      "drawing"
+    ],
+    "images": [
+      {
+        "file": "2026-4-25_Yoga_City2.jpg",
+        "caption": "The same mushroom-capped orange building and green pavilion reappear, but now beneath swirling dark-purple clouds and a blazing red-orange sunset. A red-striped road runs along the bottom; no castle or creatures this time — a quieter, moodier take on the city",
+        "caption_zh": "同样的橙色蘑菇顶建筑与绿色长条亭馆再次出现，但这一次上方是盘旋的深紫云团与炽烈的橘红色落日。画面底部是一条红色条纹的路；没有城堡也没有小生灵——一个更宁静、更富情绪的城市视角"
+      }
+    ],
+    "content": [
+      "house",
+      "nature"
+    ]
   }
 ]
