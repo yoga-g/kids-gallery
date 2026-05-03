@@ -1038,5 +1038,95 @@
       "house",
       "nature"
     ]
+  },
+  {
+    "title": "Big-Head Boy and Tall Tower",
+    "title_zh": "大头小子与高塔",
+    "date": "2025-11-28",
+    "description": "Two chalkboard panels: a big-headed cartoon boy next to a striped bus on one, and a towering multi-story house with a tiny figure and castle on the other",
+    "description_zh": "两块黑板：左边一个大头卡通小子和一辆条纹长车；右边一座多层高塔房屋，旁边有一个背书包的小人和一座小城堡",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2025-11-28_Yoga_黑板画_大头小子.jpg",
+        "caption": "Left panel: a colorful big-headed boy in bold strokes next to a long striped vehicle and a tiny ladder. Right panel: a tall multi-story tower with round and square windows, a backpack-wearing sticker figure perched near the top, and a small castle outline along the bottom street",
+        "caption_zh": "左板：一个用粗线条画的彩色大头小子，身旁一辆长长的条纹车和一架小梯子。右板：一座多层高塔，布满圆形和方形窗户，顶部站着一个背书包的小人贴纸，底部街道旁边还有一座小城堡"
+      }
+    ],
+    "content": [
+      "person",
+      "house",
+      "vehicle",
+      "castle"
+    ]
+  },
+  {
+    "title": "Toy House",
+    "title_zh": "玩具家",
+    "date": "2025-05-03",
+    "description": "Chalkboard scene of a tall toy house with many windows and antennas, a long vehicle, and a small castle — a whole little neighborhood in white and pastel chalk",
+    "description_zh": "黑板上的玩具家场景：一座布满窗户和天线的高塔房屋、一辆长长的汽车、还有一座小城堡，构成一片粉笔勾勒的小街区",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2025-5-3_Yoga_黑板画玩具家.jpg",
+        "caption": "Left panel shows a long cylindrical vehicle with round wheels and a small tent-shaped structure below. Right panel is the main event: a stacked multi-story toy house with round and square windows, a pointed roof, antennas, a backpack-sticker character, a street with tiny cars and a small castle at the very bottom",
+        "caption_zh": "左板画着一辆长圆筒汽车，车轮是圆圈，下面是一座小帐篷建筑。右板是主角：一座层层叠叠的玩具家高塔，圆窗方窗布满其上，尖顶屋顶配着天线，身旁站着一个背书包的小人贴纸，底部是一条街道和一座小城堡"
+      }
+    ],
+    "content": [
+      "house",
+      "vehicle",
+      "castle"
+    ]
+  },
+  {
+    "title": "Houses and Train Landscape",
+    "title_zh": "房屋与火车风景",
+    "date": "2026-03-02",
+    "description": "A wide three-panel chalkboard mural of an imagined world — a ship, swimming fish, a long train-like vehicle, a whale, and city details spread across three boards",
+    "description_zh": "一幅宽阔的三联黑板壁画，描绘出一个想象的世界——轮船、游动的鱼群、长长的坦克或火车、一条鲸鱼，以及各种城市细节铺满三块黑板",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2026-3-2_Yoga_黑板画_房屋和火车.jpg",
+        "caption": "Yoga sits in front of three sliding chalkboard panels covered edge-to-edge in chalk. The left panel has a ship sailing over wavy water with fish below; the middle panel shows a long train-like vehicle with many wheels under a floating whale and a small character; the right panel has more buildings and machinery. A rolled-out color-burst carpet sits on the floor in front of him",
+        "caption_zh": "Yoga 坐在三扇推拉黑板前，整面墙满满都是粉笔画。左板是一艘船在波浪水面上航行，水下有游动的鱼群；中板是一辆长长的火车，有很多轮子，上方漂浮着一条鲸鱼和一个小人；右板是更多的建筑和机器。地上铺着一张彩色光芒图案的地毯"
+      }
+    ],
+    "content": [
+      "vehicle",
+      "house",
+      "animal",
+      "nature"
+    ]
+  },
+  {
+    "title": "Undersea Tunnel",
+    "title_zh": "海底世界隧道",
+    "date": "2026-03-28",
+    "description": "Two chalkboard panels lying on the floor: the top shows a big robot or submarine silhouette with red flower stickers; the bottom shows a long undersea tunnel with sparkling gem details",
+    "description_zh": "两块平铺在地上的黑板：上方一个巨大的机器人或潜艇轮廓，点缀着红色花朵贴纸；下方是一条长长的海底隧道，嵌着闪亮的宝石装饰",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2026-3-28_Yoga_黑板画_海底世界隧道.jpg",
+        "caption": "Two chalkboard panels laid flat on the floor. The top panel features a big round-bodied figure — perhaps a submarine or friendly robot — outlined in purple chalk, flanked by a cluster of red flower stickers. The bottom panel shows a long horizontal tunnel composed of stacked capsules, decorated with a tiny gem sticker — an undersea train or submarine tunnel. Yoga is visible in the corner, mid-drawing",
+        "caption_zh": "两块黑板平铺在地上。上板是一个圆身大怪物——可能是潜艇或友好机器人——用紫色粉笔勾勒，旁边还贴着一簇红色花朵贴纸。下板画着一条由多节车厢组成的长长隧道，点缀着一颗宝石小贴纸——像是一条海底火车或潜艇通道。角落里可以看到正在画画的 Yoga"
+      }
+    ],
+    "content": [
+      "vehicle",
+      "object",
+      "abstract"
+    ]
   }
 ]
