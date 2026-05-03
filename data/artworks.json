@@ -1040,74 +1040,6 @@
     ]
   },
   {
-    "title": "Big-Head Boy and Tall Tower",
-    "title_zh": "大头小子与高塔",
-    "date": "2025-11-28",
-    "description": "Two chalkboard panels: a big-headed cartoon boy next to a striped bus on one, and a towering multi-story house with a tiny figure and castle on the other",
-    "description_zh": "两块黑板：左边一个大头卡通小子和一辆条纹长车；右边一座多层高塔房屋，旁边有一个背书包的小人和一座小城堡",
-    "tags": [
-      "chalkboard"
-    ],
-    "images": [
-      {
-        "file": "2025-11-28_Yoga_黑板画_大头小子.jpg",
-        "caption": "Left panel: a colorful big-headed boy in bold strokes next to a long striped vehicle and a tiny ladder. Right panel: a tall multi-story tower with round and square windows, a backpack-wearing sticker figure perched near the top, and a small castle outline along the bottom street",
-        "caption_zh": "左板：一个用粗线条画的彩色大头小子，身旁一辆长长的条纹车和一架小梯子。右板：一座多层高塔，布满圆形和方形窗户，顶部站着一个背书包的小人贴纸，底部街道旁边还有一座小城堡"
-      }
-    ],
-    "content": [
-      "person",
-      "house",
-      "vehicle",
-      "castle"
-    ]
-  },
-  {
-    "title": "Toy House",
-    "title_zh": "玩具家",
-    "date": "2025-05-03",
-    "description": "Chalkboard scene of a tall toy house with many windows and antennas, a long vehicle, and a small castle — a whole little neighborhood in white and pastel chalk",
-    "description_zh": "黑板上的玩具家场景：一座布满窗户和天线的高塔房屋、一辆长长的汽车、还有一座小城堡，构成一片粉笔勾勒的小街区",
-    "tags": [
-      "chalkboard"
-    ],
-    "images": [
-      {
-        "file": "2025-5-3_Yoga_黑板画玩具家.jpg",
-        "caption": "Left panel shows a long cylindrical vehicle with round wheels and a small tent-shaped structure below. Right panel is the main event: a stacked multi-story toy house with round and square windows, a pointed roof, antennas, a backpack-sticker character, a street with tiny cars and a small castle at the very bottom",
-        "caption_zh": "左板画着一辆长圆筒汽车，车轮是圆圈，下面是一座小帐篷建筑。右板是主角：一座层层叠叠的玩具家高塔，圆窗方窗布满其上，尖顶屋顶配着天线，身旁站着一个背书包的小人贴纸，底部是一条街道和一座小城堡"
-      }
-    ],
-    "content": [
-      "house",
-      "vehicle",
-      "castle"
-    ]
-  },
-  {
-    "title": "Houses and Train Landscape",
-    "title_zh": "房屋与火车风景",
-    "date": "2026-03-02",
-    "description": "A wide three-panel chalkboard mural of an imagined world — a ship, swimming fish, a long train-like vehicle, a whale, and city details spread across three boards",
-    "description_zh": "一幅宽阔的三联黑板壁画，描绘出一个想象的世界——轮船、游动的鱼群、长长的坦克或火车、一条鲸鱼，以及各种城市细节铺满三块黑板",
-    "tags": [
-      "chalkboard"
-    ],
-    "images": [
-      {
-        "file": "2026-3-2_Yoga_黑板画_房屋和火车.jpg",
-        "caption": "Yoga sits in front of three sliding chalkboard panels covered edge-to-edge in chalk. The left panel has a ship sailing over wavy water with fish below; the middle panel shows a long train-like vehicle with many wheels under a floating whale and a small character; the right panel has more buildings and machinery. A rolled-out color-burst carpet sits on the floor in front of him",
-        "caption_zh": "Yoga 坐在三扇推拉黑板前，整面墙满满都是粉笔画。左板是一艘船在波浪水面上航行，水下有游动的鱼群；中板是一辆长长的火车，有很多轮子，上方漂浮着一条鲸鱼和一个小人；右板是更多的建筑和机器。地上铺着一张彩色光芒图案的地毯"
-      }
-    ],
-    "content": [
-      "vehicle",
-      "house",
-      "animal",
-      "nature"
-    ]
-  },
-  {
     "title": "Undersea Tunnel",
     "title_zh": "海底世界隧道",
     "date": "2026-03-28",
@@ -1127,6 +1059,117 @@
       "vehicle",
       "object",
       "abstract"
+    ]
+  },
+  {
+    "title": "Big-Head Boy and Tall Tower",
+    "title_zh": "大头小子与高塔",
+    "date": "2025-11-28",
+    "description": "A towering multi-story chalk house rises above a tiny street lined with small castles, a ladder and a lone figure — chalk fantasy architecture",
+    "description_zh": "黑板上一座层层叠叠的高塔房屋俯瞰着下方的小街道，街上排列着几座小尖顶城堡、一个小人和一架梯子——粉笔画成的幻想建筑",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2025-11-28_Yoga_黑板画_大头小子.jpg",
+        "caption": "A large multi-story house dominates the top of the board with round and square windows and a tiny front door; a swirling cloud floats to its right. Below, a long street hosts a row of small triangle-roofed castles, a solitary stick figure, and a small ladder, with a checkered rug tucked into the bottom-left corner",
+        "caption_zh": "画面顶部是一座庞大的多层房屋，满布圆窗方窗，正面还有一扇小门；房屋右侧飘着一团螺旋状云朵。下方是一条长长的街道，街上排列着几座三角尖顶的小城堡、一个孤单的小人、一架小梯子，左下角还藏着一张格纹小地毯"
+      }
+    ],
+    "content": [
+      "house",
+      "castle",
+      "person"
+    ]
+  },
+  {
+    "title": "House and Train",
+    "title_zh": "房屋和火车",
+    "date": "2026-03-02",
+    "description": "Two chalkboard panels — a large windowed house and a fish-faced creature on the left, a long train carriage and a small alien sticker on the right",
+    "description_zh": "两块黑板并排：左板画着一座布满窗户的大房子，下方一个鱼脸大怪物；右板是一节长长的火车车厢，旁边贴着一个外星小人",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2026-3-2_Yoga_黑板画_房屋和火车.jpg",
+        "caption": "Left panel: a tall house with a triangular roof, round and square windows and a chimney sits at the top; below it a round-bodied creature with big eyes and a little mouth takes over most of the board. Right panel: a long rectangular train or bus with many windows stretches across the top, and a brightly colored little alien sticker perches next to two chalk-drawn pillars",
+        "caption_zh": "左板：顶部是一座三角尖顶的大房子，圆窗方窗和一根烟囱一应俱全；下方整个黑板被一个圆身子大眼睛小嘴巴的怪物占据。右板：顶部横着一辆长方形的火车或公交车，车身布满窗格；旁边还贴着一个彩色的外星人小贴纸，立在两根粉笔柱旁边"
+      }
+    ],
+    "content": [
+      "house",
+      "vehicle",
+      "animal"
+    ]
+  },
+  {
+    "title": "Tall Towers and Saturn",
+    "title_zh": "高楼与土星",
+    "date": "2026-04-03",
+    "description": "An in-progress chalkboard scene — a stack of tall tower buildings on the left, a ringed planet and spacecraft on the right, photographed with Yoga sitting on the floor",
+    "description_zh": "黑板作画进行中的一幕——左边一叠高耸的塔楼建筑，右边是一颗带环的星球和一艘飞船，照片里 Yoga 正盘腿坐在地毯上",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2026-4-3_Yoga_高楼.jpg",
+        "caption": "Two chalkboard panels. Left panel: a tall stack of multi-story towers with many windows and doors, decorated with red-flower stickers and a small rainbow block. Right panel: a ringed planet (like Saturn) floats at the top with a rocket-shaped ship below, accompanied by red-flower stickers. Yoga sits cross-legged on a teal rug in his pajamas, with a red chalk box beside him",
+        "caption_zh": "两块黑板并排。左板：一叠多层高塔，窗户和小门密密麻麻，旁边贴着几朵红色小花和一块彩虹小方块。右板：顶部飘着一颗带光环的星球（像土星），下方是一艘火箭形状的小飞船，同样点缀着红花贴纸。Yoga 穿着睡衣盘腿坐在青绿色圆地毯上，身旁是一盒红色粉笔"
+      }
+    ],
+    "content": [
+      "house",
+      "object",
+      "abstract"
+    ]
+  },
+  {
+    "title": "House and Bus",
+    "title_zh": "房子与公交车",
+    "date": "2026-02-26",
+    "description": "Two chalkboard panels: a big house with a giant round-bodied creature on the left, a long bus and a little alien sticker on the right",
+    "description_zh": "两块黑板：左板画着一座大房子和一个占满半边板的圆身大怪物；右板画着一辆长长的公交车，旁边贴着一个外星小人",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2026-2-26_Yoga_黑板画房屋.png",
+        "caption": "Left panel: a tall house with a peaked roof, a chimney puffing into a large cloud, round and square windows and a front door; beneath it a round-bodied creature with two big eyes and a tiny mouth spans most of the lower half. Right panel: a long rectangular bus or carriage runs across the top with many evenly-spaced windows, and a small alien sticker perches beside two white chalk pillars",
+        "caption_zh": "左板：一座尖顶大房子，烟囱上冒出一团大云，墙上是圆窗方窗和一扇正门；下方大半块黑板被一个圆身子、两只大眼睛、一张小嘴的怪物占据。右板：顶部是一辆长方形公交车，整齐排列着许多小窗，旁边贴着一个外星人小贴纸，立在两根白色粉笔柱之间"
+      }
+    ],
+    "content": [
+      "house",
+      "vehicle",
+      "animal",
+      "person"
+    ]
+  },
+  {
+    "title": "Toy House",
+    "title_zh": "玩具家",
+    "date": "2026-05-03",
+    "description": "Chalkboard scene of a tall toy house with many windows and antennas, a long vehicle, and a small castle — a whole little neighborhood in white and pastel chalk",
+    "description_zh": "黑板上的玩具家场景：一座布满窗户和天线的高塔房屋、一辆长长的汽车、还有一座小城堡，构成一片粉笔勾勒的小街区",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2026-5-3_Yoga_黑板画玩具家.jpg",
+        "caption": "Left panel shows a long cylindrical vehicle with round wheels and a small tent-shaped structure below. Right panel is the main event: a stacked multi-story toy house with round and square windows, a pointed roof, antennas, a backpack-sticker character, a street with tiny cars and a small castle at the very bottom",
+        "caption_zh": "左板画着一辆长圆筒汽车，车轮是圆圈，下面是一座小帐篷建筑。右板是主角：一座层层叠叠的玩具家高塔，圆窗方窗布满其上，尖顶屋顶配着天线，身旁站着一个背书包的小人贴纸，底部是一条街道和一座小城堡"
+      }
+    ],
+    "content": [
+      "house",
+      "vehicle",
+      "castle"
     ]
   }
 ]
