@@ -1171,5 +1171,47 @@
       "vehicle",
       "castle"
     ]
+  },
+  {
+    "title": "Rainy Day Umbrellas",
+    "title_zh": "下雨天",
+    "date": "2026-04-28",
+    "description": "Mixed-media collage of grey storm clouds raining over three paper umbrellas against a vivid orange-and-yellow painted sky",
+    "description_zh": "混合媒介拼贴画，灰色乌云在鲜艳的橙黄色天空下降雨，三把纸雨伞撑在雨中",
+    "tags": [
+      "collage"
+    ],
+    "images": [
+      {
+        "file": "2026-4-28_Yoga_下雨天.jpg",
+        "caption": "Two large grey paper clouds sit near the top of a bright orange-and-yellow painted background, with short green brushstrokes falling as rain; below, three umbrellas made from crinkled brown and tan paper are arranged in a row, each with a curled orange clay or paper handle",
+        "caption_zh": "两片灰色纸质乌云贴在明亮的橙黄色涂绘背景上方，绿色短笔触化作雨滴落下；下方三把用褐色和棕色褶皱纸做成的雨伞依次排列，每把都带有弯曲的橙色把手"
+      }
+    ],
+    "content": [
+      "object",
+      "nature"
+    ]
+  },
+  {
+    "title": "Nemo Clownfish",
+    "title_zh": "尼莫鱼",
+    "date": "2026-05-01",
+    "description": "Bold oil painting of two orange clownfish swimming among coral and sea anemones in a dark underwater scene",
+    "description_zh": "大胆的油画风格，两条橙色小丑鱼在深色海底的珊瑚和海葵间游弋",
+    "tags": [
+      "oil painting"
+    ],
+    "images": [
+      {
+        "file": "2026-5-1_Yoga_Nimo鱼.jpg",
+        "caption": "Two bright orange clownfish with white vertical stripes and black eyes swim in a dark underwater scene; to the left, tall red coral with pink bubble-like tips and a green-red sea anemone fill the background, while olive-green seaweed tendrils wind along the bottom against patches of deep blue water",
+        "caption_zh": "两条明亮的橙色小丑鱼身上带有白色竖条纹和黑色眼睛，在深色海底游动；左侧红色珊瑚顶端点缀着粉色气泡状圆点，一朵红绿色的海葵填满背景，橄榄绿的海草沿底部蜿蜒，衬着深蓝色的海水"
+      }
+    ],
+    "content": [
+      "animal",
+      "nature"
+    ]
   }
 ]
