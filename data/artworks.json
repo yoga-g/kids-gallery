@@ -1213,5 +1213,31 @@
       "animal",
       "nature"
     ]
+  },
+  {
+    "title": "Cardboard Tank Battalion",
+    "title_zh": "手工坦克车",
+    "date": "2026-05-16",
+    "description": "Mixed-media craft combining cardboard construction and marker drawings to create a tank battle scene with buildings and terrain",
+    "description_zh": "混合媒介手工作品，用硬纸板拼搭和马克笔绘画组合出坦克战斗场景，配有房屋和地形",
+    "tags": [
+      "craft"
+    ],
+    "images": [
+      {
+        "file": "2026-5-16_Yoga_手工坦克车_p1.jpg",
+        "caption": "A long cardboard tank with folded brown cardboard treads runs across the bottom; above it, white paper shows a printed tank reference image on the left, hand-drawn houses and a large vehicle outline in black marker in the center, and blue marker roads and a lamppost on the right, with red-bordered label stickers and a Good Work car sticker scattered throughout",
+        "caption_zh": "一辆用折叠棕色硬纸板做履带的长坦克横跨底部；上方白纸上左侧有一张打印的坦克参考图，中间用黑色马克笔手绘了房屋和大型车辆轮廓，右侧用蓝色马克笔画了道路和路灯，红框标签贴纸和小汽车贴纸散布其间"
+      },
+      {
+        "file": "2026-5-16_Yoga_手工坦克车_p2.jpg",
+        "caption": "A wider view showing the full cardboard tank extending across the scene with an even longer row of folded cardboard treads; the upper section features multiple hand-drawn tanks in black marker alongside printed tank reference images, a large cannon barrel extending to the right, and red-bordered label stickers marking different sections of the battlefield",
+        "caption_zh": "更宽的全景视角展示了整个硬纸板坦克横跨画面，更长一排折叠纸板履带；上方有多辆黑色马克笔手绘坦克与打印的坦克参考图并列，一根大炮管向右延伸，红框标签贴纸标注着战场的不同区域"
+      }
+    ],
+    "content": [
+      "vehicle",
+      "house"
+    ]
   }
 ]
