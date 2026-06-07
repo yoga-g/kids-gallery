@@ -1244,5 +1244,98 @@
       "vehicle",
       "house"
     ]
+  },
+  {
+    "title": "High-Speed Train Station",
+    "title_zh": "高铁",
+    "date": "2025-05-30",
+    "description": "Chalkboard drawing of a red high-speed train arriving at a station with a waiting passenger and overhead power lines",
+    "description_zh": "黑板画，一辆红色高铁进站，站台上有等候的乘客和架空电线",
+    "tags": [
+      "chalkboard"
+    ],
+    "images": [
+      {
+        "file": "2025-5-30_Yoga_高铁_p1.jpg",
+        "caption": "A tall vertical chalkboard scene: at the bottom, a large red and pink high-speed train drawn in chalk with white outlines arrives at a yellow platform, its rounded nose facing the viewer; overhead white chalk power lines stretch across; a small cartoon boy sticker stands at the station; above in the dark sky, white and pink magnetic block shapes are scattered, and three red flower magnets mark the left side",
+        "caption_zh": "竖幅黑板画：底部一辆用粉红色和白色粉笔画的大型高铁正面进站，圆润的车头朝向观者，黄色站台在下方；头顶白色粉笔架空电线横跨；一个卡通男孩贴纸站在站台上；上方深色天空中散落着白色和粉色磁力片形状，左侧有三朵红花磁铁"
+      },
+      {
+        "file": "2025-5-30_Yoga_高铁_p2.jpg",
+        "caption": "Yoga stands with his back to the camera in a white tank top, drawing on the large black chalkboard wall with chalk, adding details to his high-speed train artwork; a picture book lies open on the floor beside him for reference",
+        "caption_zh": "Yoga穿着白色背心背对镜头站着，正用粉笔在大黑板墙上作画，为他的高铁作品添加细节；地上旁边摊开一本图画书作为参考"
+      }
+    ],
+    "content": [
+      "vehicle",
+      "person"
+    ]
+  },
+  {
+    "title": "Clay Seahorse and Elephant",
+    "title_zh": "立体画",
+    "date": "2026-05-20",
+    "description": "Mixed-media artwork with sculpted clay animals placed on a painted canvas background of green, blue, and warm earth tones",
+    "description_zh": "混合媒介立体作品，用黏土塑的动物放置在绿色、蓝色和暖色调涂绘的画布背景上",
+    "tags": [
+      "mixed media"
+    ],
+    "images": [
+      {
+        "file": "2026-5-20_Yoga_立体画_p1.jpg",
+        "caption": "A canvas with a bright green painted border frames a soft pastel background of blue-grey and yellow washes; on top sits an orange clay seahorse with segmented ridges and a curled tail, alongside a white clay elephant with spread legs, both standing out three-dimensionally against the flat painted surface",
+        "caption_zh": "一块画布上鲜绿色涂绘的边框围着蓝灰和黄色水彩般的柔和背景；上面立着一只橙色黏土海马，身体有分段纹理和卷曲的尾巴，旁边是一只白色黏土大象，四腿张开，两者在平面画布上呈现立体效果"
+      },
+      {
+        "file": "2026-5-20_Yoga_立体画_p2.jpg",
+        "caption": "A close-up angled view of the same artwork showing the textured details of the orange seahorse with a blue dot eye and the white elephant with sculpted trunk and legs, the painted canvas beneath revealing layers of green, grey, black, yellow, and a hint of red brushwork",
+        "caption_zh": "同一作品的近距离斜角视图，展示橙色海马的纹理细节和蓝色圆点眼睛，以及白色大象雕塑的象鼻和四肢，下方画布显露出绿色、灰色、黑色、黄色和一抹红色的笔触层次"
+      }
+    ],
+    "content": [
+      "animal"
+    ]
+  },
+  {
+    "title": "Room Collage Gallery",
+    "title_zh": "贴图",
+    "date": "2026-05-24",
+    "description": "Vibrant collage of cut-out miniature room scenes and objects layered over an orange and red painted background",
+    "description_zh": "色彩鲜艳的拼贴画，各种剪裁的迷你房间场景和物品层叠在橙红色涂绘背景上",
+    "tags": [
+      "collage"
+    ],
+    "images": [
+      {
+        "file": "2026-5-24_Yoga_贴图.jpg",
+        "caption": "A busy collage on an orange-and-red painted background filled with dozens of small cut-out images: miniature bookshelves, potted plants, furniture, a butterfly, flowers, a cat on a red sofa, framed pictures, a window scene, and various household objects, all overlapping in a joyful chaotic arrangement with touches of green, blue, yellow, and pink throughout",
+        "caption_zh": "橙红色涂绘背景上铺满了数十个小剪贴图片的热闹拼贴画：迷你书架、盆栽植物、家具、蝴蝶、花朵、红沙发上的猫、相框画、窗户场景和各种家居物品，全部以欢快的层叠方式排列，点缀着绿色、蓝色、黄色和粉色"
+      }
+    ],
+    "content": [
+      "object",
+      "house"
+    ]
+  },
+  {
+    "title": "Stormy Sea Adventure",
+    "title_zh": "发烧了画的画",
+    "date": "2026-06-07",
+    "description": "Expressive marker drawing of a smiling figure amid crashing blue waves and buildings, drawn while having a fever",
+    "description_zh": "发烧时画的充满表现力的马克笔画，一个微笑的人物在蓝色巨浪和建筑物中冒险",
+    "tags": [
+      "drawing"
+    ],
+    "images": [
+      {
+        "file": "2026-6-7_Yoga_发烧了画的画.jpg",
+        "caption": "Bold marker drawing on white paper: sweeping black wavy lines fill the top like storm clouds; below, large blue and green marker waves crash across the page; a small smiling yellow face with a red circle outline stands in the center; to the right, blue marker sketches of buildings, scaffolding-like structures, and a pink-red object at the bottom add to the energetic composition",
+        "caption_zh": "白纸上大胆的马克笔画：顶部黑色波浪线如暴风云密布；下方蓝色和绿色马克笔画的巨浪翻涌；中间站着一个带红色圆圈轮廓的黄色笑脸小人；右侧有蓝色马克笔画的建筑物、脚手架般的结构，底部一个粉红色物体，整体构图充满能量"
+      }
+    ],
+    "content": [
+      "person",
+      "nature"
+    ]
   }
 ]
